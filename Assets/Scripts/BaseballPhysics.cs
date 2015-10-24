@@ -14,7 +14,7 @@ public class BaseballPhysics : MonoBehaviour {
     // Use this for initialization
     void Start () {
         baseballRigid = baseball.GetComponent<Rigidbody>();
-        StartCoroutine(Example());
+        StartCoroutine(BallFactory());
     }
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class BaseballPhysics : MonoBehaviour {
         
     }
 
-    IEnumerator Example() {
+    IEnumerator BallFactory() {
         for (int i = 0; i < 20; i += 1) { 
             GameObject clone;
             clone = Instantiate(baseball, position, transform.rotation) as GameObject;

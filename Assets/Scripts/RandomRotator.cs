@@ -3,11 +3,11 @@ using System.Collections;
 
 public class RandomRotator : MonoBehaviour
 {
-	public float tumble;
+	public Vector3 tumble;
 
 	void Start()
 	{
-		GetComponent<Rigidbody>().velocity = transform.forward * -tumble;
+		GetComponent<Rigidbody>().velocity = transform.forward + -tumble;
 	}
 
 }

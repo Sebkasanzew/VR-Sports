@@ -226,8 +226,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2101380121}
-  m_LocalRotation: {x: 0, y: .3416861, z: 0, w: .93981415}
-  m_LocalPosition: {x: -8.35999966, y: 1, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -244,11 +244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseball: {fileID: 150224, guid: e3925ede162c96f4e81ae16d3570df7e, type: 2}
-  timeoutDestructor: 0
-  xPosition: 0
-  yPosition: 0
-  zPosition: 10
-  xVelocity: -10
+  timeoutDestructor: 2
+  xPosition: 4
+  yPosition: 5
+  zPosition: 100
+  xVelocity: 0
   yVelocity: 20
-  zVelocity: 5
+  zVelocity: -23
   frequency: 3

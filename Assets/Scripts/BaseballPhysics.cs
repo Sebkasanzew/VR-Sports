@@ -5,12 +5,8 @@ public class BaseballPhysics : MonoBehaviour {
 
     public GameObject baseball;
     public int timeoutDestructor; // TODO implement this
-    public int xPosition;
-    public int yPosition;
-    public int zPosition;
-    public int xVelocity;
-    public int yVelocity;
-    public int zVelocity;
+    public Vector3 position;
+    public Vector3 velocity;
     public int frequency;
 
     private Rigidbody baseballRigid;
@@ -29,8 +25,8 @@ public class BaseballPhysics : MonoBehaviour {
     IEnumerator Example() {
         for (int i = 0; i < 20; i += 1) { 
             GameObject clone;
-            clone = Instantiate(baseball, new Vector3(xPosition, yPosition, zPosition), transform.rotation) as GameObject;
-            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(xVelocity, yVelocity, zVelocity));
+            clone = Instantiate(baseball, position, transform.rotation) as GameObject;
+            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(velocity);
             Debug.Log("created" + i);
             Destroy(clone, 3000);
             yield return new WaitForSeconds(frequency);

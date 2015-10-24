@@ -7,7 +7,7 @@ public class RandomRotator : MonoBehaviour
 
 	void Start()
 	{
-		GetComponent<Rigidbody>().velocity = transform.forward * tumble;
+		GetComponent<Rigidbody>().velocity = transform.forward * -tumble;
 	}
 
 }

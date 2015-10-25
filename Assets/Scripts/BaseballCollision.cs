@@ -3,7 +3,8 @@ using System.Collections;
 
 public class BaseballCollision : MonoBehaviour {
     Vector3 contact;
-	// Use this for initialization
+    // Use this for initialization
+
 	void Start () {
         //Debug.Log(transform.GetComponent<Rigidbody>().velocity);
     }
@@ -23,6 +24,10 @@ public class BaseballCollision : MonoBehaviour {
     {
         if(other.tag == "Bat")
         {
+
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+
             var impactVelocityX = transform.GetComponent<Rigidbody>().velocity.x - other.GetComponent<Rigidbody>().velocity.x;
             impactVelocityX *= Mathf.Sign(impactVelocityX);
             var impactVelocityY = transform.GetComponent<Rigidbody>().velocity.y - other.GetComponent<Rigidbody>().velocity.y;
@@ -36,10 +41,8 @@ public class BaseballCollision : MonoBehaviour {
 
             Debug.Log("impactForce: " + impactForce);
 
-            transform.GetComponent<Rigidbody>().velocity = new Vector3(0, 10, impactForce);
-
+            transform.GetComponent<Rigidbody>().velocity = new Vector3(0, 10, impactForce);           
         }
-
         
     }
 

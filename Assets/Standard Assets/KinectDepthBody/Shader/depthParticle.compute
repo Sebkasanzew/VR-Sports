@@ -1,0 +1,38 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+
+StructuredBuffer<float> depthBuffer;
+StructuredBuffer<float2> colorSpacePoints;
+RWStructuredBuffer<float3> particleBuffer;
+RWStructuredBuffer<float3> colorBuffer;
+StructuredBuffer<float4> noiseColorBuffer;
+
+int activatedNoiseColor;
+
+Texture2D<float4> res;
+
+[numthreads(32,32,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	uint numObjects, dummy;
+    noiseColorBuffer.GetDimensions(numObjects, dummy); 
+
+	//Calc Index
+    int index = id.y * 256 + id.x*0.5;
+
+	if(activatedNoiseColor == 1)
+	{
+		colorBuffer[index] = noiseColorBuffer[fmod(index, numObjects-1)];
+	}
+	else
+	{
+		//Get Color of Texture by ColorSpacePoint
+		colorBuffer[index] =  res[colorSpacePoints[index]];
+	}
+
+	//Set Particle Depth
+	particleBuffer[index].z = depthBuffer[index];
+}
+
+

@@ -367,13 +367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseball: {fileID: 150224, guid: e3925ede162c96f4e81ae16d3570df7e, type: 2}
   timeoutDestructor: 5
-  xPosition: 10
-  yPosition: 0
-  zPosition: 100
-  xVelocity: 0
-  yVelocity: 10
-  zVelocity: -100
-  frequency: 3
+  position: {x: 10, y: 0, z: 100}
+  velocity: {x: 0, y: 10, z: -100}
+  frequency: 1
 --- !u!4 &1323793961
 Transform:
   m_ObjectHideFlags: 0
@@ -398,6 +394,7 @@ GameObject:
   - 92: {fileID: 1649183241}
   - 124: {fileID: 1649183240}
   - 81: {fileID: 1649183239}
+  - 114: {fileID: 1649183244}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -467,7 +464,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649183238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

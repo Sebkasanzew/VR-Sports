@@ -126,15 +126,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_ReceiveShadows
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tumble: {x: 30, y: 30, z: 30}
-  belt: {fileID: 1616062457}
+  bat: {fileID: 1616062457}
 --- !u!1 &1194993112
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +427,7 @@ GameObject:
   - 92: {fileID: 1649183241}
   - 124: {fileID: 1649183240}
   - 81: {fileID: 1649183239}
+  - 114: {fileID: 1649183244}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -496,8 +497,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649183238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1649183244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1649183238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5b064de1abe244b91c67e537900bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseball: {fileID: 150224, guid: e3925ede162c96f4e81ae16d3570df7e, type: 2}
+  timeoutDestructor: 0
+  xPosition: 6
+  yPosition: 0
+  zPosition: 87
+  xVelocity: 0
+  yVelocity: 20
+  zVelocity: -23
+  frequency: 3

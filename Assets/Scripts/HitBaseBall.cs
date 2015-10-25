@@ -14,7 +14,7 @@ public class HitBaseBall : MonoBehaviour
         //r.velocity = new Vector3(0f, 0f, 0f); //-GetComponent<Rigidbody>().velocity + transform.forward * tumble;
         //r.useGravity = true;
         //r.AddForce(-r.velocity + tumble, ForceMode.Impulse);
-        r.AddForceAtPosition(-r.velocity, bat.transform.position, ForceMode.Impulse);
-        r.useGravity = true;
+        //r.AddForceAtPosition(-r.velocity, bat.transform.position, ForceMode.Impulse);
+        //r.useGravity = true;
     }
 }

@@ -373,7 +373,7 @@ MonoBehaviour:
   xVelocity: 0
   yVelocity: 10
   zVelocity: -100
-  frequency: 1
+  frequency: 3
 --- !u!4 &1323793961
 Transform:
   m_ObjectHideFlags: 0

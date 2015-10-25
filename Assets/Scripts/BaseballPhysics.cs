@@ -23,11 +23,13 @@ public class BaseballPhysics : MonoBehaviour {
     }
 
     IEnumerator BallFactory() {
-        for (int i = 0; i < 20; i += 1) { 
+        for (int i = 0; i < 100; i += 1) { 
             GameObject clone;
-            clone = Instantiate(baseball, position, transform.rotation) as GameObject;
-            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(velocity);
-            Debug.Log("created" + i);
+            clone = Instantiate(baseball, new Vector3(position.x, position.y, position.z), transform.rotation) as GameObject;
+
+            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(velocity.x + Random.Range(-10.0F, 10.0F),
+                                                                                                velocity.y + Random.Range(-10.0F, 10.0F),
+                                                                                                velocity.z + Random.Range(-10.0F, 10.0F)));
             Destroy(clone, 3000);
             yield return new WaitForSeconds(frequency);
         }

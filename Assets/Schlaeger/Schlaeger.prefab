@@ -27,6 +27,7 @@ GameObject:
   - 114: {fileID: 11403320}
   - 114: {fileID: 11476438}
   - 54: {fileID: 5431030}
+  - 136: {fileID: 13639124}
   m_Layer: 0
   m_Name: Schlaeger
   m_TagString: Untagged
@@ -43,11 +44,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 444790}
   - 33: {fileID: 3389430}
-  - 136: {fileID: 13691444}
   - 23: {fileID: 2338500}
-  - 65: {fileID: 6585808}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,8 +83,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .430000007, y: 18, z: 3.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15.8999996, y: -2.5, z: 8.39999962}
+  m_LocalScale: {x: .300000012, y: .180000007, z: .393999994}
   m_Children:
   - {fileID: 444790}
   - {fileID: 463962}
@@ -101,7 +100,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 93567eec45ba97b4585bdbd3c72de426, type: 2}
+  - {fileID: 2100000, guid: 7ce454ba871b6a54aa2dbadbcddfe01f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -129,26 +128,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144594}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6585808
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150492}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .99999994, y: 2, z: 1}
-  m_Center: {x: -5.96046448e-08, y: 0, z: 0}
 --- !u!114 &11403320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,28 +169,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6881383da85164d94526dfa7e36adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hand: 2
+  Hand: 1
   Sensitivity: {x: .100000001, y: .100000001, z: .100000001}
---- !u!136 &13691444
+--- !u!136 &13639124
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150492}
+  m_GameObject: {fileID: 144594}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
+  m_Radius: 4
+  m_Height: 140
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 60, z: 8}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144594}

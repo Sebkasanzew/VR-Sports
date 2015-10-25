@@ -126,15 +126,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_LocalScale.x
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_LocalScale.z
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: a8dca0e08217b4b478f16db5e1944970, type: 3}
       propertyPath: m_ReceiveShadows
@@ -170,6 +170,7 @@ GameObject:
   - 33: {fileID: 265175640}
   - 64: {fileID: 265175639}
   - 23: {fileID: 265175638}
+  - 54: {fileID: 265175642}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Plane
@@ -232,6 +233,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1764559695}
   m_RootOrder: 0
+--- !u!54 &265175642
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265175637}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &359122899
 Prefab:
   m_ObjectHideFlags: 0
@@ -394,7 +410,6 @@ GameObject:
   - 92: {fileID: 1649183241}
   - 124: {fileID: 1649183240}
   - 81: {fileID: 1649183239}
-  - 114: {fileID: 1649183244}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
